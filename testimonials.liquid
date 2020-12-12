@@ -1,0 +1,326 @@
+<div class="testi-container"> 
+        <div class="h">{{section.settings.testi-title}} <a href="{{section.settings.testi-link}}">View More</a></div>
+        <div class="testimonials" id="testimonials">
+            <div class="testi-card">
+                <img src="{{section.settings.c1-img | img_url:'master'}}" alt="customers">
+                <div class="t-review">My son loves them. They are savior for parents when you are out or you just have a hungry toddler.<!-- Have used them in malls, flights, car rides etc. Thank you Happa foods.--></div>
+                <div class="t-name">-Ketaki S.</div>
+            </div>
+            <div class="testi-card">
+                <img src="{{section.settings.c2-img | img_url:'master'}}" alt="customers">
+                <div class="t-review">These purees help me to include fruits/spinach/oats regularly into my growing baby's diet. <!-- Most of the time I was not able to buy all these veggies/fruits to make it a puree to my little champ.--></div>
+                <div class="t-name">-Pradeep</div>
+            </div>
+            <div class="testi-card">
+                <img src="{{section.settings.c3-img | img_url:'master'}}" alt="customers">
+                <div class="t-review">I just love it! As a mother of two, I'd say This stuff is a bliss for a mother. <!-- This stuff is bliss for a mother who has to carry 101 things when travelling.--></div>
+                <div class="t-name">-Shachi</div>
+            </div>
+            <div class="testi-card">
+                <img src="{{section.settings.c4-img | img_url:'master'}}" alt="customers">
+                <div class="t-review">My child is a very picky eater <!--so was apprehensive if he would like the product--> but was really happy to see that he finished it off within few minutes.<!--Perfect travel companion, really hassle free.--></div>
+                <div class="t-name">-Raj Sanghvi</div>
+            </div>
+            <div class="testi-card">
+                <img src="{{section.settings.c5-img | img_url:'master'}}" alt="customers">
+                <div class="t-review">My 8 month old loves almost all the flavours. Mango ones are his favourite. Must for travel.<!-- I would request u guys to start proper food items too for travel.--></div>
+                <div class="t-name">-Alok Shyamsukh</div>
+            </div>
+            <div class="testi-card">
+                <img src="{{section.settings.c6-img | img_url:'master'}}" alt="customers">
+                <div class="t-review">My 10 month old loves it, we give it to him sometimes as a treat when he doesn't like home-cooked food.<!-- It's really convenient to have this healthy baby food.--></div>
+                <div class="t-name">-Shilpa</div>
+            </div>
+            <div class="testi-card">
+                <img src="{{section.settings.c7-img | img_url:'master'}}" alt="customers">
+                <div class="t-review">I got multiple pouches of various flavours and prooved very handy while travelling specially on flights <!--and also during some occasions which were away from home. it's tastes good and fresh.--></div>
+                <div class="t-name">-Manisha</div>
+            </div>
+            <div class="testi-card">
+                <img src="{{section.settings.c8-img | img_url:'master'}}" alt="customers">
+                <div class="t-review">I am always looking for healthy and organic food options for my baby especially for travelling. <!--I found these purees and ordered a mango puree mix combo and my baby loved the flavours.--></div>
+                <div class="t-name">-Namit Srivastava</div>
+            </div>
+            <div class="testi-card">
+                <img src="{{section.settings.c9-img | img_url:'master'}}" alt="customers">
+                <div class="t-review">The product is great it has all organic ingredients present and the packaging is also great it is very healthy for babies<!-- and easy to carry in travelling as well as it is ready to eat product.--></div>
+                <div class="t-name">-Rutu</div>
+            </div>
+            <div class="testi-card">
+                <img src="{{section.settings.c10-img | img_url:'master'}}" alt="customers">
+                <div class="t-review">Happy with the taste of Happa products. Even the meal tubs are good if you are traveling with kids. Better than giving cerelac to babies. Happy to buy from Happa!</div>
+                <div class="t-name">-Arti</div>
+            </div>
+        </div>
+  
+  		<button id="prevh" onclick="prevh()"></button>
+        <button id="nexth" onclick="nexth()"></button>
+    </div>
+
+    <style>
+        .testi-container{
+            width: 80%;
+          	margin: 0 auto;
+            overflow: hidden;
+            position:relative;
+          	height: 345px;
+        }
+        .testi-container .h{
+            font-size: 25px;
+            font-weight: 600;
+            text-align: center;
+          	margin: 25px;
+        }
+      	.testi-container .h a{
+          	display:inline-block;
+      		font-size:15px
+        }
+      	.testi-container button{
+            position: absolute;
+            top: 45%;
+            background: transparent;
+            border: 0;
+            font-size: 55px;
+            font-weight: 900;
+          	cursor:pointer;
+        }
+        .testi-container button#prevh{
+            left:2%
+        }
+      	.testi-container button#prevh:before{
+          	content: "\2190";
+          	color: #00b7f0;
+          
+          text-shadow: 5px 0px 6px white;
+        }  	
+        .testi-container button#nexth{
+            right:2%
+        }
+      	.testi-container button#nexth:before{
+          	content: "\2192";
+          	color: #00b7f0;
+          
+          text-shadow: -5px 0px 6px white;
+        }
+        .testimonials{
+            width: 90%;
+          	margin: 0 auto;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap;
+            padding-bottom: 20px;
+            box-sizing: content-box;
+            /*touch-action: pan-x;*/
+            -ms-overflow-style: none;
+          
+          	scroll-snap-type: x mandatory;
+          
+          	scroll-behavior: smooth
+        }
+      	.testimonials::-webkit-scrollbar {
+    		display: none;
+		}
+        .testimonials .testi-card{
+            width: 33%;
+    		margin: 1px;
+            display: inline-block; 
+            text-align: center;
+          
+          	background-image: url("{{ 'testimonial-bg.png' | asset_url }}");
+            background-size: 100% 100%;
+            position: relative;
+            height:252px;
+            border-radius:15px;
+     
+        }
+        @media only screen and (max-width: 500px){
+        .testimonials .testi-card{
+            width: 45%;
+            }
+        }
+        @media only screen and (max-width: 375px){
+            .testimonials .testi-card{
+            width: 97%;
+            }
+        }
+        .testimonials .testi-card img{
+            border-radius: 28px;
+          	width:100px;
+          	height:100px;
+          
+          	position: absolute;
+            left: 10%;
+            bottom: 46px;
+            transform: rotate(-15deg);
+          	
+        }
+        .testimonials .testi-card .t-review{
+            white-space: normal;
+            font-size:16px;
+            color: black;
+          	height: 132px;
+    		padding: 10px 22px;
+          	display: flex;
+    		align-items: center;
+          
+          	color: white;
+    font-weight: 600;
+    width: 176px;
+    position: absolute;
+    bottom: 27px;
+    right: -17px;
+    font-style: italic;
+        }
+      	.testimonials .testi-card .t-name {
+            font-weight: 900;
+            font-size: 16px;
+        }
+      @media only screen and (max-width: 1199px) {
+        .testimonials .testi-card .t-review{
+        	padding: 5px 2px;
+        }
+      }
+      @media only screen and (max-width: 1020px){
+        .testi-container {
+    		width: 90%;
+        }
+      }
+      @media only screen and (max-width: 907px){
+        .testi-container {
+              width: 92%;
+         }
+        .testimonials {
+          width: 95%;
+         }
+      }
+      @media only screen and (max-width: 840px){
+        .testimonials .testi-card {
+          width: 37%;
+        }
+      }
+       @media only screen and (max-width: 768px){
+        .testimonials .testi-card {
+          width: 50%;
+        }
+      }
+      @media only screen and (max-width: 555px){
+        .testimonials .testi-card {
+          width: 100%;
+        }
+        .testi-container button {
+          top: 38%;
+        }
+        .testi-container button#prevh{
+            left:8%
+        }
+        .testi-container button#nexth{
+            right:8%
+        }
+      }
+      @media(hover: hover) and (pointer: fine) {
+    	.testi-container button#prevh:hover:before{
+          	color: #003c4e;
+        }
+        .testi-container button#nexth:hover:before{
+          	color: #003c4e;
+        }
+	}
+      
+      
+      
+      
+      .testimonials .testi-card .t-name {
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 40%;
+}
+    </style>
+
+	<script>
+        function prevh(){
+          	var w = document.querySelector('.testi-card').clientWidth;
+			document.getElementById("testimonials").scrollLeft -= (w+5);
+        }
+        function nexth(){
+			var w = document.querySelector('.testi-card').clientWidth;
+			document.getElementById("testimonials").scrollLeft += (w+5);
+        }
+    </script>
+ 
+{% schema %}
+ {
+    "name": "testimonials",
+    "settings": [
+					{
+						"type" : "url",
+						"label" : "testimonials link",
+						"id" : "testi-link",
+						"default":"/"
+					},
+					{
+						"type" : "text",
+						"label" : "testimonial title",
+						"id" : "testi-title",
+						"default":"Customer Testimonials"
+					},
+					{
+						"type" : "image_picker",
+						"label" : "customer image1(100px X 100px)",
+						"id" : "c1-img"
+					},
+					{
+						"type" : "image_picker",
+						"label" : "customer image2(100px X 100px)",
+						"id" : "c2-img"
+					},														
+					{
+						"type" : "image_picker",
+						"label" : "customer image3(100px X 100px)",
+						"id" : "c3-img"
+					},
+					{
+						"type" : "image_picker",
+						"label" : "customer image4(100px X 100px)",
+						"id" : "c4-img"
+					},
+					{
+						"type" : "image_picker",
+						"label" : "customer image5(100px X 100px)",
+						"id" : "c5-img"
+					},
+					{
+						"type" : "image_picker",
+						"label" : "customer image6(100px X 100px)",
+						"id" : "c6-img"
+					},
+					{
+						"type" : "image_picker",
+						"label" : "customer image7(100px X 100px)",
+						"id" : "c7-img"
+					},
+					{
+						"type" : "image_picker",
+						"label" : "customer image8(100px X 100px)",
+						"id" : "c8-img"
+					},
+					{
+						"type" : "image_picker",
+						"label" : "customer image9(100px X 100px)",
+						"id" : "c9-img"
+					},
+					{
+						"type" : "image_picker",
+						"label" : "customer image10(100px X 100px)",
+						"id" : "c10-img"
+					}
+				],
+
+	"presets": [
+				{ "category" : "Testimonials",
+				  "name" : "testimonials"
+                }
+			   ]
+  }
+{% endschema %}
+
